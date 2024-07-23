@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DBank_backend } from 'declarations/DBank_backend';
+import { hello_backend } from 'declarations/hello_backend';
 
 function App() {
   const [greeting, setGreeting] = useState('');
@@ -7,7 +7,7 @@ function App() {
   function handleSubmit(event) {
     event.preventDefault();
     const name = event.target.elements.name.value;
-    DBank_backend.greet(name).then((greeting) => {
+    hello_backend.greet(name).then((greeting) => {
       setGreeting(greeting);
     });
     return false;
